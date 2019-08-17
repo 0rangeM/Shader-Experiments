@@ -1,0 +1,14 @@
+//A rudimentary colour shifting shader. Many uniforms are left implicit.
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform float u_time;
+
+void main() {
+    float fred = 5.0/4.0;
+    float fblue = 7.0/4.0;
+    float fgreen = 11.0/4.0;
+	gl_FragColor = vec4(abs(sin(fred*u_time)),abs(sin(fblue*u_time)),abs(sin(fgreen*u_time)),1.0);
+}
